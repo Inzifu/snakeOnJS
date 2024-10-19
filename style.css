@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x:hidden;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+button {
+   padding: 0;
+   border: none;
+   font: inherit;
+   color: inherit;
+   background-color: transparent;
+   cursor: pointer;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ======================================================== */
+
+body{
+    background-color: #123444;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+     font-weight: 500;
+     max-height: 100vh;
+}
+.main{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.wrapper{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter_records{
+    font-size: 20px;
+    color: bisque;
+    align-items: center;
+}
+.records_now{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.records_best{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* УДАЛЯТЬ СТИЛЬ ПРИ СОХРАНЕНИИ*/
+}
+.records_best_display{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.record_number{
+    width: 300px;
+    text-align: center;
+    border: 3px solid bisque;
+    border-radius: 10px;
+}
+.field{
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 602px;
+    height: 602px;
+    margin-top: 50px;
+    border: 1px solid wheat;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.field_point{
+    width: 60px;
+    height: 60px;
+    padding: 3px;
+    background-color: #234567;
+    border: 1px solid white;
+}
+
+.snake_body{
+  background-color:#F56E8B;
+}
+.snake_head{
+  background-color:#F53D65;
+}
+.food{
+  background-color: greenyellow;
+}
+.snake_dead{
+  background-color: gray;
+  opacity: 50%;
+}
+.snake_head_dead{
+  background-color: gray;
+  opacity: 80%;
+}
+.food_dead{
+ background-color: #228751; 
+}
+.btn{
+  display: block;
+  margin-top: 30px;
+  width: 300px;
+  border-radius: 10px;
+  color: bisque;
+  font-size: 20px;
+  border: solid 3px bisque;
+}
+.btn_hidden{
+  display: none;
+}
